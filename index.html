@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vortulon.xyz</title>
     
-    <!-- embed shit -->
     <meta property="og:title" content="vortulon.xyz">
     <meta property="og:description" content="Upcoming fullstack developer, designer, and all-around cool person. Check out what I (sometimes) make!">
     <meta property="og:image" content="https://vortulon.xyz/images/favicon.png">
@@ -14,22 +13,40 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#9c9b60">
     
-    <!-- gooogle font slop -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- css stylesheets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/styles.css">
     
+    <style>
+        .support-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: #50503f;
+            color: #eceff4;
+            text-decoration: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .support-link:hover {
+            background-color: #6d6c4b;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
-    <!-- stars -->
     <div class="stars" id="stars"></div>
     
-    <!-- aurora effect -->
     <div class="aurora">
         <div class="aurora-beam"></div>
         <div class="aurora-beam"></div>
@@ -46,7 +63,6 @@
                 <h1>hi, i'm<br>vortulon</h1>
             </div>
             
-            <!-- holy shit why are svgs such a pain in the ass i finally figured it out after a couple hours -->
             <p class="bio"></p>
             <div class="links">
                 <a href="https://github.com/vortulon" class="link github-link">
@@ -65,17 +81,22 @@
             
             <div class="status">
                 <span class="status-circle"></span>
-                <span class="status-text">Generally active, feel free to reach out anytime!</span> <!-- also just gonna say im proud of this circle thing -->
+                <span class="status-text">Generally active, feel free to reach out anytime!</span>
             </div>
             <div class="romania-colors"></div>
-        </div>
-        
+   
         <footer>
             <p>© 2025 vortulon.xyz</p>
         </footer>
     </div>
     
-    <!-- javascript slop -->
+    <a href="donations.html" class="support-link">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        Support Me
+    </a>
+    
     <script src="js/stars.js"></script>
     <script src="js/main.js"></script>
 </body>

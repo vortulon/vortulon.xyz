@@ -1,6 +1,4 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    // this makes the mouse funny
     document.addEventListener('mousemove', function(e) {
         const container = document.querySelector('.container');
         const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
@@ -9,13 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.transform = `translateY(-5px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     });
     
-    // reset transform when mouse leaves the window
     document.addEventListener('mouseleave', function() {
         const container = document.querySelector('.container');
         container.style.transform = 'translateY(-5px)';
     });
     
-    // funny link shit
     const links = document.querySelectorAll('.link');
     links.forEach(link => {
         link.addEventListener('mouseenter', function() {
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // copyright year thing, this is actualyl really cool
     const yearElement = document.querySelector('footer p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
